@@ -1,0 +1,25 @@
+{
+  "security": {
+    "auth": {
+      "selectedType": "oauth-personal"
+    }
+  },
+  "general": {
+    "previewFeatures": true,
+    "vimMode": true,
+    "enablePromptCompletion": true
+  },
+  "ui": {
+    "showMemoryUsage": true,
+    "showModelInfoInChat": true
+  },
+  "ide": {
+    "enabled": true
+  },
+  "experimental": {
+    "skills": true,
+    "introspectionAgentSettings": {
+      "enabled": true
+    }
+  }
+}

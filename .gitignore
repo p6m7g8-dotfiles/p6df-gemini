@@ -1,0 +1,6 @@
+share/gemini/oauth_creds.json
+share/gemini/extensions/
+share/gemini/tmp/
+share/gemini/google_accounts.json
+share/gemini/installation_id
+share/gemini/state.json
