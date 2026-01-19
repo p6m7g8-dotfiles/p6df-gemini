@@ -50,11 +50,11 @@ p6df::modules::gemini::aliases::init() {
 ######################################################################
 #<
 #
-# Function: p6df::modules::gemini::prompt::line()
+# Function: p6df::modules::gemini::prompt::mod()
 #
 #>
 ######################################################################
-p6df::modules::gemini::prompt::line() {
+p6df::modules::gemini::prompt::mod() {
 
   p6_gemini_prompt_info
 }
