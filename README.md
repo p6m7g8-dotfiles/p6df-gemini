@@ -30,7 +30,7 @@
 - p6df::modules::gemini::deps()
 - p6df::modules::gemini::external::brew()
 - p6df::modules::gemini::home::symlink()
-- p6df::modules::gemini::prompt::line()
+- p6df::modules::gemini::prompt::mod()
 - str str = p6_gemini_prompt_info()
 
 ## Hierarchy

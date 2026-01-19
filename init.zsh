@@ -50,11 +50,11 @@ p6df::modules::gemini::aliases::init() {
 ######################################################################
 #<
 #
-# Function: p6df::modules::gemini::prompt::line()
+# Function: p6df::modules::gemini::prompt::mod()
 #
 #>
 ######################################################################
-p6df::modules::gemini::prompt::line() {
+p6df::modules::gemini::prompt::mod() {
 
   p6_gemini_prompt_info
 }
@@ -72,7 +72,7 @@ p6df::modules::gemini::prompt::line() {
 p6_gemini_prompt_info() {
 
   local str
-  str="gemini:\t\t 
+  str="gemini:\t\t  "
 
   p6_return_str "$str"
 }
