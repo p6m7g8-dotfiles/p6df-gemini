@@ -107,11 +107,13 @@ p6df::modules::gemini::aliases::init() {
 ######################################################################
 p6df::modules::gemini::prompt::mod() {
 
-  local user=$(cat "$HOME"/.gemini/google_accounts.json | jq  -r '.active')
-
   local str 
-  if ! p6_string_blank "$user"; then
-    str="gemini:\t\t  $user"
+  if ! p6_string_blank "$P6_DFZ_PROFILE_GEMINI"; then
+    local user=$(cat "$HOME"/.gemini/google_accounts.json | jq  -r '.active')
+
+    if ! p6_string_blank "$user"; then
+      str="gemini:\t\t  $P6_DFZ_PROFILE_GEMINI: $user"
+    fi
   fi
 
   p6_return_str "$str"
