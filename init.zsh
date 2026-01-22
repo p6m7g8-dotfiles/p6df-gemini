@@ -21,7 +21,7 @@ p6df::modules::gemini::deps() {
 ######################################################################
 p6df::modules::gemini::vscodes() {
 
-  code --install-extension google.gemini-code-assist
+  code --install-extension google.geminicodeassist
 
   p6_return_void
 }
@@ -102,12 +102,12 @@ p6df::modules::gemini::aliases::init() {
 #  Returns:
 #	str - str
 #
-#  Environment:	 HOME
+#  Environment:	 HOME P6_DFZ_PROFILE_GEMINI
 #>
 ######################################################################
 p6df::modules::gemini::prompt::mod() {
 
-  local str 
+  local str
   if ! p6_string_blank "$P6_DFZ_PROFILE_GEMINI"; then
     local user=$(cat "$HOME"/.gemini/google_accounts.json | jq  -r '.active')
 
@@ -117,4 +117,38 @@ p6df::modules::gemini::prompt::mod() {
   fi
 
   p6_return_str "$str"
+}
+
+######################################################################
+#<
+#
+# Function: p6df::modules::gemini::profile::on(profile)
+#
+#  Args:
+#	profile -
+#
+#  Environment:	 P6_DFZ_PROFILE_GEMINI
+#>
+######################################################################
+p6df::modules::gemini::profile::on() {
+  local profile="$1"
+
+  p6_env_export "P6_DFZ_PROFILE_GEMINI" "$profile"
+
+  p6_return_void
+}
+
+######################################################################
+#<
+#
+# Function: p6df::modules::gemini::profile::off()
+#
+#  Environment:	 P6_DFZ_PROFILE_GEMINI
+#>
+######################################################################
+p6df::modules::gemini::profile::off() {
+
+  p6_env_export_un P6_DFZ_PROFILE_GEMINI
+
+  p6_return_void
 }
