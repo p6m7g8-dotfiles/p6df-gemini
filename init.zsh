@@ -35,7 +35,7 @@ p6df::modules::gemini::vscodes() {
 ######################################################################
 p6df::modules::gemini::external::brews() {
 
-  p6df::modules::homebrew::cli::brew::install gemini-cli
+  p6df::core::homebrew::cli::brew::install gemini-cli
 
   p6_return_void
 }
