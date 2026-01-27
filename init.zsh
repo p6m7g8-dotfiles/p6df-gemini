@@ -21,7 +21,26 @@ p6df::modules::gemini::deps() {
 ######################################################################
 p6df::modules::gemini::vscodes() {
 
-  code --install-extension google.geminicodeassist
+  p6df::modules::vscode::extension::install google.geminicodeassist
+
+  p6_return_void
+}
+
+######################################################################
+#<
+#
+# Function: str json = p6df::modules::gemini::vscodes::config()
+#
+#  Returns:
+#	str - json
+#
+#>
+######################################################################
+p6df::modules::gemini::vscodes::config() {
+
+  cat <<'EOF'
+  "geminicodeassist.project": "p6m7g8"
+EOF
 
   p6_return_void
 }
