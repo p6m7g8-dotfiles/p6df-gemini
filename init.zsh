@@ -127,10 +127,10 @@ p6df::modules::gemini::aliases::init() {
 p6df::modules::gemini::prompt::mod() {
 
   local str
-  if ! p6_string_blank "$P6_DFZ_PROFILE_GEMINI"; then
+  if p6_string_blank_NOT "$P6_DFZ_PROFILE_GEMINI"; then
     local user=$(cat "$HOME"/.gemini/google_accounts.json | jq  -r '.active')
 
-    if ! p6_string_blank "$user"; then
+    if p6_string_blank_NOT "$user"; then
       str="gemini:\t\t  $P6_DFZ_PROFILE_GEMINI: $user"
     fi
   fi
