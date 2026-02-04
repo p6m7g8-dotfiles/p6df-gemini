@@ -29,10 +29,7 @@ p6df::modules::gemini::vscodes() {
 ######################################################################
 #<
 #
-# Function: str json = p6df::modules::gemini::vscodes::config()
-#
-#  Returns:
-#	str - json
+# Function: p6df::modules::gemini::vscodes::config()
 #
 #>
 ######################################################################
