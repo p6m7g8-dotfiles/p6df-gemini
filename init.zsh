@@ -35,10 +35,6 @@ p6df::modules::gemini::vscodes() {
 ######################################################################
 p6df::modules::gemini::vscodes::config() {
 
-  cat <<'EOF'
-  "geminicodeassist.project": "p6m7g8"
-EOF
-
   p6_return_void
 }
 
