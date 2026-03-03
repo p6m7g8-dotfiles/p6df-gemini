@@ -41,11 +41,11 @@ TODO: Add a short summary of this module.
 - `p6df::modules::gemini::home::symlink()`
 - `p6df::modules::gemini::langs(_dir)`
   - Args:
-    - _dir - 
+    - _dir -
 - `p6df::modules::gemini::profile::off()`
 - `p6df::modules::gemini::profile::on(profile)`
   - Args:
-    - profile - 
+    - profile -
 - `p6df::modules::gemini::vscodes()`
 - `p6df::modules::gemini::vscodes::config()`
 - `str str = p6df::modules::gemini::prompt::mod()`

@@ -62,7 +62,7 @@ p6df::modules::gemini::external::brews() {
 ######################################################################
 p6df::modules::gemini::home::symlink() {
 
-  p6_file_symlink "$P6_DFZ_SRC_P6M7G8_DOTFILES_DIR/p6df-gemini/share/gemini" .gemini
+  p6_file_symlink "$P6_DFZ_SRC_P6M7G8_DOTFILES_DIR/p6df-gemini/share/gemini" "$HOME/.gemini"
 
   p6_return_void
 }
