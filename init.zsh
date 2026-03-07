@@ -57,7 +57,7 @@ p6df::modules::gemini::external::brews() {
 #
 # Function: p6df::modules::gemini::home::symlink()
 #
-#  Environment:	 P6_DFZ_SRC_P6M7G8_DOTFILES_DIR
+#  Environment:	 HOME P6_DFZ_SRC_P6M7G8_DOTFILES_DIR
 #>
 ######################################################################
 p6df::modules::gemini::home::symlink() {
@@ -82,14 +82,27 @@ p6df::modules::gemini::langs() {
 
   gemini extensions install --consent https://github.com/gemini-cli-extensions/workspace
   gemini extensions enable google-workspace
-  gemini extensions install --consent https://github.com/github/github-mcp-server
   gemini extensions install --consent https://github.com/gemini-cli-extensions/security
   gemini extensions install --consent https://github.com/gemini-cli-extensions/code-review
   gemini extensions install --consent https://github.com/ox01024/gemini-cli-git
-  gemini extensions install --consent https://github.com/saadmanrafat/uv-mcp
   gemini extensions install --consent https://github.com/Menghuan1918/gemini-cli-gopls
   gemini extensions install --consent https://github.com/gemini-cli-extensions/conductor # --auto-update
   gemini extensions install --consent https://github.com/DoIT-Artificial-Intelligence/youtube-to-docs.git
+
+  p6_return_void
+}
+
+######################################################################
+#<
+#
+# Function: p6df::modules::gemini::mcp()
+#
+#>
+######################################################################
+p6df::modules::gemini::mcp() {
+
+  gemini extensions install --consent https://github.com/github/github-mcp-server
+  gemini extensions install --consent https://github.com/saadmanrafat/uv-mcp
 
   p6_return_void
 }
