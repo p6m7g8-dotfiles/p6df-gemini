@@ -134,7 +134,7 @@ p6df::modules::gemini::prompt::mod() {
 
   local str
   if p6_string_blank_NOT "$P6_DFZ_PROFILE_GEMINI"; then
-    local user=$(cat "$HOME"/.gemini/google_accounts.json | jq  -r '.active')
+    local user=$(p6_json_from_file "$HOME/.gemini/google_accounts.json" | p6_json_eval -r '.active')
 
     if p6_string_blank_NOT "$user"; then
       str="gemini:\t\t  $P6_DFZ_PROFILE_GEMINI: $user"
