@@ -29,18 +29,6 @@ p6df::modules::gemini::vscodes() {
 ######################################################################
 #<
 #
-# Function: p6df::modules::gemini::vscodes::config()
-#
-#>
-######################################################################
-p6df::modules::gemini::vscodes::config() {
-
-  p6_return_void
-}
-
-######################################################################
-#<
-#
 # Function: p6df::modules::gemini::external::brews()
 #
 #>
@@ -110,79 +98,15 @@ p6df::modules::gemini::mcp() {
 ######################################################################
 #<
 #
-# Function: p6df::modules::gemini::aliases::init()
-#
-#>
-######################################################################
-p6df::modules::gemini::aliases::init() {
-
-  p6_return_void
-}
-
-######################################################################
-#<
-#
-# Function: str str = p6df::modules::gemini::prompt::mod()
+# Function: words gemini $GEMINI_API_KEY = p6df::modules::gemini::profile::mod()
 #
 #  Returns:
-#	str - str
+#	words - gemini $GEMINI_API_KEY
 #
-#  Environment:	 HOME P6_DFZ_PROFILE_GEMINI
+#  Environment:	 GEMINI_API_KEY
 #>
 ######################################################################
-p6df::modules::gemini::prompt::mod() {
+p6df::modules::gemini::profile::mod() {
 
-  local str
-  if p6_string_blank_NOT "$P6_DFZ_PROFILE_GEMINI"; then
-    local user=$(p6_json_from_file "$HOME/.gemini/google_accounts.json" | p6_json_eval -r '.active')
-
-    if p6_string_blank_NOT "$user"; then
-      str="gemini:\t\t  $P6_DFZ_PROFILE_GEMINI: $user"
-    fi
-  fi
-
-  p6_return_str "$str"
-}
-
-######################################################################
-#<
-#
-# Function: p6df::modules::gemini::profile::on(profile, code)
-#
-#  Args:
-#	profile -
-#	code - shell code block (export GEMINI_API_KEY=...)
-#
-#  Environment:	 P6_DFZ_PROFILE_GEMINI
-#>
-######################################################################
-p6df::modules::gemini::profile::on() {
-  local profile="$1"
-  local code="$2"
-
-  p6_run_code "$code"
-
-  p6_env_export "P6_DFZ_PROFILE_GEMINI" "$profile"
-
-  p6_return_void
-}
-
-######################################################################
-#<
-#
-# Function: p6df::modules::gemini::profile::off(code)
-#
-#  Args:
-#	code - shell code block previously passed to profile::on
-#
-#  Environment:	 P6_DFZ_PROFILE_GEMINI
-#>
-######################################################################
-p6df::modules::gemini::profile::off() {
-  local code="$1"
-
-  p6_env_unset_from_code "$code"
-  p6_env_export_un P6_DFZ_PROFILE_GEMINI
-
-  p6_return_void
+  p6_return_words 'gemini' '$GEMINI_API_KEY'
 }
