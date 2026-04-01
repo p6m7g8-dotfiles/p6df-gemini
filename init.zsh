@@ -108,5 +108,5 @@ p6df::modules::gemini::mcp() {
 ######################################################################
 p6df::modules::gemini::profile::mod() {
 
-  p6_return_words 'gemini' '$GEMINI_API_KEY'
+  p6_return_words 'gemini' "$"
 }
