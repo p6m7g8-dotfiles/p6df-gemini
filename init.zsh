@@ -94,19 +94,3 @@ p6df::modules::gemini::mcp() {
 
   p6_return_void
 }
-
-######################################################################
-#<
-#
-# Function: words gemini $GEMINI_API_KEY = p6df::modules::gemini::profile::mod()
-#
-#  Returns:
-#	words - gemini $GEMINI_API_KEY
-#
-#  Environment:	 GEMINI_API_KEY
-#>
-######################################################################
-p6df::modules::gemini::profile::mod() {
-
-  p6_return_words 'gemini' "$"
-}
