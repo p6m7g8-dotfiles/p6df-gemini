@@ -15,13 +15,14 @@ p6df::modules::gemini::deps() {
 ######################################################################
 #<
 #
-# Function: p6df::modules::gemini::vscodes()
+# Function: p6df::modules::gemini::home::symlinks()
 #
+#  Environment:	 HOME P6_DFZ_SRC_P6M7G8_DOTFILES_DIR
 #>
 ######################################################################
-p6df::modules::gemini::vscodes() {
+p6df::modules::gemini::home::symlinks() {
 
-  p6df::modules::vscode::extension::install google.geminicodeassist
+  p6_file_symlink "$P6_DFZ_SRC_P6M7G8_DOTFILES_DIR/p6df-gemini/share/gemini" "$HOME/.gemini"
 
   p6_return_void
 }
@@ -36,21 +37,6 @@ p6df::modules::gemini::vscodes() {
 p6df::modules::gemini::external::brews() {
 
   p6df::core::homebrew::cli::brew::install gemini-cli
-
-  p6_return_void
-}
-
-######################################################################
-#<
-#
-# Function: p6df::modules::gemini::home::symlinks()
-#
-#  Environment:	 HOME P6_DFZ_SRC_P6M7G8_DOTFILES_DIR
-#>
-######################################################################
-p6df::modules::gemini::home::symlinks() {
-
-  p6_file_symlink "$P6_DFZ_SRC_P6M7G8_DOTFILES_DIR/p6df-gemini/share/gemini" "$HOME/.gemini"
 
   p6_return_void
 }
@@ -94,3 +80,17 @@ p6df::modules::gemini::mcp() {
 
   p6_return_void
 }
+######################################################################
+#<
+#
+# Function: p6df::modules::gemini::vscodes()
+#
+#>
+######################################################################
+p6df::modules::gemini::vscodes() {
+
+  p6df::modules::vscode::extension::install google.geminicodeassist
+
+  p6_return_void
+}
+
