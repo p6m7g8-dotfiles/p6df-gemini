@@ -17,8 +17,7 @@
 
 ## Summary
 
-p6df module for Google Gemini CLI: VSCode integration, profile switching,
-and MCP server extensions (`github-mcp-server`, `uv-mcp`) for AI workflows.
+TODO: Add a short summary of this module.
 
 ## Contributing
 
@@ -36,21 +35,14 @@ and MCP server extensions (`github-mcp-server`, `uv-mcp`) for AI workflows.
 
 ##### p6df-gemini/init.zsh
 
-- `p6df::modules::gemini::aliases::init()`
 - `p6df::modules::gemini::deps()`
 - `p6df::modules::gemini::external::brews()`
-- `p6df::modules::gemini::home::symlink()`
+- `p6df::modules::gemini::home::symlinks()`
 - `p6df::modules::gemini::langs(_dir)`
   - Args:
     - _dir
 - `p6df::modules::gemini::mcp()`
-- `p6df::modules::gemini::profile::off()`
-- `p6df::modules::gemini::profile::on(profile)`
-  - Args:
-    - profile
 - `p6df::modules::gemini::vscodes()`
-- `p6df::modules::gemini::vscodes::config()`
-- `str str = p6df::modules::gemini::prompt::mod()`
 
 ## Hierarchy
 
