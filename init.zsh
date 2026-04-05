@@ -1,52 +1,11 @@
 # shellcheck shell=bash
 ######################################################################
-#<
-#
-# Function: p6df::modules::gemini::deps()
-#
-#>
-######################################################################
 p6df::modules::gemini::deps() {
   ModuleDeps=(
     p6m7g8-dotfiles/p6common
   )
 }
 
-######################################################################
-#<
-#
-# Function: p6df::modules::gemini::vscodes()
-#
-#>
-######################################################################
-p6df::modules::gemini::vscodes() {
-
-  p6df::modules::vscode::extension::install google.geminicodeassist
-
-  p6_return_void
-}
-
-######################################################################
-#<
-#
-# Function: p6df::modules::gemini::external::brews()
-#
-#>
-######################################################################
-p6df::modules::gemini::external::brews() {
-
-  p6df::core::homebrew::cli::brew::install gemini-cli
-
-  p6_return_void
-}
-
-######################################################################
-#<
-#
-# Function: p6df::modules::gemini::home::symlinks()
-#
-#  Environment:	 HOME P6_DFZ_SRC_P6M7G8_DOTFILES_DIR
-#>
 ######################################################################
 p6df::modules::gemini::home::symlinks() {
 
@@ -56,14 +15,13 @@ p6df::modules::gemini::home::symlinks() {
 }
 
 ######################################################################
-#<
-#
-# Function: p6df::modules::gemini::langs(_dir)
-#
-#  Args:
-#	_dir -
-#
-#>
+p6df::modules::gemini::external::brews() {
+
+  p6df::core::homebrew::cli::brew::install gemini-cli
+
+  p6_return_void
+}
+
 ######################################################################
 p6df::modules::gemini::langs() {
   local _dir="$1"
@@ -81,12 +39,6 @@ p6df::modules::gemini::langs() {
 }
 
 ######################################################################
-#<
-#
-# Function: p6df::modules::gemini::mcp()
-#
-#>
-######################################################################
 p6df::modules::gemini::mcp() {
 
   gemini extensions install --consent https://github.com/github/github-mcp-server
@@ -94,3 +46,51 @@ p6df::modules::gemini::mcp() {
 
   p6_return_void
 }
+######################################################################
+p6df::modules::gemini::vscodes() {
+
+  p6df::modules::vscode::extension::install google.geminicodeassist
+
+  p6_return_void
+}
+
+######################################################################
+#<
+#
+# Function: p6df::modules::gemini::deps()
+#
+#>
+######################################################################
+#<
+#
+# Function: p6df::modules::gemini::vscodes()
+#
+#>
+######################################################################
+#<
+#
+# Function: p6df::modules::gemini::external::brews()
+#
+#>
+######################################################################
+#<
+#
+# Function: p6df::modules::gemini::home::symlinks()
+#
+#  Environment:	 HOME P6_DFZ_SRC_P6M7G8_DOTFILES_DIR
+#>
+######################################################################
+#<
+#
+# Function: p6df::modules::gemini::langs(_dir)
+#
+#  Args:
+#	_dir -
+#
+#>
+######################################################################
+#<
+#
+# Function: p6df::modules::gemini::mcp()
+#
+#>
